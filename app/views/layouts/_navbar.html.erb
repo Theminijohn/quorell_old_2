@@ -9,7 +9,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <%= link_to 'Topics', '#', class: 'nav-link' %>
+          <%= link_to 'Topics', topics_path, class: 'nav-link' %>
         </li>
 
         <li class="nav-item">
@@ -29,7 +29,7 @@
             </a>
 
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <%= link_to '#', class: 'dropdown-item' do %>
+              <%= link_to new_topic_path, class: 'dropdown-item' do %>
                 <i class="far fa-plus-octagon mr-2"></i>
                 Add Topic
               <% end %>

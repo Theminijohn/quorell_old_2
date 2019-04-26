@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @topic.name %>
+</p>
+
+<p>
+  <strong>Slug:</strong>
+  <%= @topic.slug %>
+</p>
+
+<p>
+  <strong>Quora slug:</strong>
+  <%= @topic.quora_slug %>
+</p>
+
+<p>
+  <strong>Followers count:</strong>
+  <%= @topic.followers_count %>
+</p>
+
+<p>
+  <strong>Questions count:</strong>
+  <%= @topic.questions_count %>
+</p>
+
+<%= link_to 'Edit', edit_topic_path(@topic) %> |
+<%= link_to 'Back', topics_path %>
