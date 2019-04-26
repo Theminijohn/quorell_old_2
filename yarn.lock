@@ -733,6 +733,11 @@
   resolved "https://registry.yarnpkg.com/@csstools/convert-colors/-/convert-colors-1.4.0.tgz#ad495dc41b12e75d588c6db8b9834f08fa131eb7"
   integrity sha512-5a6wqoJV/xEdbRNKVo6I4hO3VjyDq//8q2f9I6PBAvMesJHFauXDorcNCsr9RzvsZnaWi5NYCcfyqP1QeFHFbw==
 
+"@fortawesome/fontawesome-pro@^5.8.1":
+  version "5.8.1"
+  resolved "https://npm.fontawesome.com/@fortawesome/fontawesome-pro/-/fontawesome-pro-5.8.1.tgz#a676c70df0ea7968457cd338ba19d360d8b037d2"
+  integrity sha512-o9DsmAMuGG1gQrDfk0yvbdNdtGlNyBH8qV7WnH/0NnUyecnm++KY+RwqVxpfT9nmyZYew51RVWJsUhIUGI/X7A==
+
 "@rails/activestorage@^6.0.0-alpha":
   version "6.0.0-alpha"
   resolved "https://registry.yarnpkg.com/@rails/activestorage/-/activestorage-6.0.0-alpha.tgz#6eb6c0f49bcaa4ad68fcd13a750b9a17f76f086f"

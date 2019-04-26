@@ -22,14 +22,14 @@
       </ul>
 
       <ul class="navbar-nav">
-        <% if false %>
+        <% if user_signed_in? %>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <%= current_user.email %>
             </a>
 
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <%= link_to new_topic_path, class: 'dropdown-item' do %>
+              <%= link_to '#', class: 'dropdown-item' do %>
                 <i class="far fa-plus-octagon mr-2"></i>
                 Add Topic
               <% end %>
@@ -40,11 +40,11 @@
           </li>
         <% else %>
           <li class="nav-item">
-            <%= link_to 'Register', '#', class: 'nav-link' %>
+            <%= link_to 'Register', new_user_registration_path, class: 'nav-link' %>
           </li>
 
           <li class="nav-item">
-            <%= link_to 'Sign in', '#', class: 'nav-link' %>
+            <%= link_to 'Sign in', new_user_session_path, class: 'nav-link' %>
           </li>
         <% end %>
       </ul>

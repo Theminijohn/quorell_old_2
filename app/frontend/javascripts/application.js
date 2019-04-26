@@ -1,5 +1,6 @@
 import 'bootstrap'
 import 'stylesheets/application'
+import '@fortawesome/fontawesome-pro/js/all'
 
 require("@rails/ujs").start()
 require("turbolinks").start()

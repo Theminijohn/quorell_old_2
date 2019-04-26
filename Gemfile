@@ -12,6 +12,8 @@ gem 'bootsnap', '>= 1.4.2', require: false
 gem 'config', '~> 1.7', '>= 1.7.1'
 gem 'friendly_id', '~> 5.2', '>= 5.2.5'
 
+gem 'devise', '~> 4.6', '>= 4.6.2'
+
 group :development, :test do
   gem 'pry', '~> 0.12.2'
   gem 'rspec-rails', '~> 3.8', '>= 3.8.2'
