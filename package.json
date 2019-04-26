@@ -15,10 +15,12 @@
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "toastr": "^2.1.4",
     "turbolinks": "^5.2.0"
   },
   "version": "0.1.0",
   "devDependencies": {
+    "expose-loader": "^0.7.5",
     "webpack-dev-server": "^3.3.1"
   }
 }
