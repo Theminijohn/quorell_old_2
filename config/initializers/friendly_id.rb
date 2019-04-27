@@ -18,7 +18,7 @@ FriendlyId.defaults do |config|
 
   config.reserved_words = %w(new edit index session login logout users admin
     stylesheets assets javascripts images)
-    
+
   # This adds an option to treat reserved words as conflicts rather than exceptions.
   # When there is no good candidate, a UUID will be appended, matching the existing
   # conflict behavior.
@@ -43,20 +43,20 @@ FriendlyId.defaults do |config|
   # Something else to consider is that using the :finders addon boosts
   # performance because it will avoid Rails-internal code that makes runtime
   # calls to `Module.extend`.
-  #
-  # config.use :finders
-  #
+
+  config.use :finders
+
   # ## Slugs
   #
   # Most applications will use the :slugged module everywhere. If you wish
   # to do so, uncomment the following line.
-  #
-  # config.use :slugged
-  #
+
+  config.use :slugged
+
   # By default, FriendlyId's :slugged addon expects the slug column to be named
   # 'slug', but you can change it if you wish.
   #
-  # config.slug_column = 'slug'
+  config.slug_column = 'slug'
   #
   # By default, slug has no size limit, but you can change it if you wish.
   #
@@ -86,14 +86,14 @@ FriendlyId.defaults do |config|
   # If you have `friendly_id :name, use: slugged` in the model, Slugged module
   # is included after the anonymous module defined in the initializer, so it
   # overrides the `should_generate_new_friendly_id?` method from the anonymous module.
-  #
+
   # config.use :slugged
   # config.use Module.new {
   #   def should_generate_new_friendly_id?
   #     slug.blank? || <your_column_name_here>_changed?
   #   end
   # }
-  #
+
   # FriendlyId uses Rails's `parameterize` method to generate slugs, but for
   # languages that don't use the Roman alphabet, that's not usually sufficient.
   # Here we use the Babosa library to transliterate Russian Cyrillic slugs to

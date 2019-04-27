@@ -17,14 +17,13 @@ class TopicsController < ApplicationController
   end
 
   def create
-    topic_slug = topic_params[:quora_topic_url].match(/topic\/(?=\S*)([\da-zA-Z'-]+)/)[1]
-    topic_name = topic_slug.gsub("-", " ").gsub(/\d+/,"").strip
+    topic_name = topic_params[:quora_slug].gsub("-", " ").gsub(/\d+/,"").strip
 
-    if @topic = Topic.where(quora_slug: topic_slug).first_or_create {|t| t.name = topic_name }
+    if @topic = Topic.where(topic_params).first_or_create {|t| t.name = topic_name }
       redirect_to topics_path, notice: 'Topic was added to your account'
-    else
-      render :new
     end
+  rescue StandardError => e
+    redirect_to new_topic_path, notice: "We encountered a problem while adding this topic. Is the URL correct?"
   end
 
   def update
@@ -37,7 +36,7 @@ class TopicsController < ApplicationController
 
   def destroy
     @topic.destroy
-    redirect_to topics_url, notice: 'Topic was successfully destroyed.'
+    redirect_to topics_url, notice: 'Topic was successfully removed'
   end
 
   private
@@ -47,6 +46,6 @@ class TopicsController < ApplicationController
   end
 
   def topic_params
-    params.require(:topic).permit(:quora_topic_url)
+    params.require(:topic).permit(:quora_slug)
   end
 end

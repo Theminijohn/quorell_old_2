@@ -14,6 +14,4 @@ require("@rails/activestorage").start()
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
 
-document.addEventListener('turbolinks:load', () => {
-  // Toastr.info('Are you the 6 fingered man?')
-})
+document.addEventListener('turbolinks:load', () => { })
