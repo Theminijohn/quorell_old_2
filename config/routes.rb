@@ -1,5 +1,12 @@
 Rails.application.routes.draw do
-  resources :topics
-  devise_for :users
   root 'pages#home'
+  devise_for :users
+
+  resources :topics
+
+	namespace :api do
+		namespace :v1 do
+			resources :questions, only: :create
+		end
+	end
 end
